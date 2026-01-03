@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shashiprabha Agritech | Poushtikam Mushroom</title>
+  <meta name="description" content="Shashiprabha Agritech - Poushtikam Mushroom. 100% organic, fresh Button & Oyster mushrooms from Barail, Supaul, Bihar. Orders, bulk supply, and paid mushroom farming training." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#9fb0c7;
+      --text:#eaf0ff;
+      --accent:#2ecc71;
+      --accent2:#22c55e;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue";
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#070c16 0%, #0b1220 40%, #070c16 100%);color:var(--text);font-family:var(--font)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,12,22,.6);
+      border-bottom:1px solid var(--border);
+    }
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand small{display:block;color:var(--muted);font-weight:700;font-size:12px;margin-top:2px}
+    .brand img{
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+    }
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
+    .navlinks a{color:var(--muted);font-weight:700;font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;font-weight:800;font-size:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      transition:.2s ease;
+    }
+    .btn:hover{transform: translateY(-1px);background: rgba(255,255,255,.10)}
+    .btn.primary{background: linear-gradient(90deg, var(--accent), var(--accent2));color:#08111f;border:none}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .hero{padding:42px 0 18px}
+    .grid2{display:grid;grid-template-columns: 1.1fr .9fr;gap:20px}
+    @media (max-width: 900px){.grid2{grid-template-columns:1fr}}
+    .tag{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 12px;border-radius:999px;
+      background: rgba(46,204,113,.12);
+      border:1px solid rgba(46,204,113,.25);
+      color:#b9ffd1;font-weight:900;font-size:13px;
+    }
+    h1{margin:14px 0 10px;font-size:42px;line-height:1.12}
+    @media (max-width: 520px){h1{font-size:34px}}
+    .lead{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 18px}
+    .heroCard{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .heroCard:before{
+      content:"";
+      position:absolute;inset:-120px -120px auto auto;
+      width:240px;height:240px;border-radius:999px;
+      background: radial-gradient(circle, rgba(46,204,113,.30), rgba(46,204,113,0));
+      filter: blur(2px);
+    }
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    @media (max-width: 520px){.stats{grid-template-columns:1fr}}
+    .stat{
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding:14px;
+    }
+    .stat b{font-size:18px}
+    .stat span{display:block;color:var(--muted);margin-top:4px;font-size:13px}
+    .section{padding:26px 0}
+    .secHead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+    .secHead h2{margin:0;font-size:26px}
+    .secHead p{margin:0;color:var(--muted);max-width:520px;line-height:1.5}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 900px){.cards{grid-template-columns:1fr}}
+    .card{
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    }
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);line-height:1.6}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .pill{font-size:12px;font-weight:900;color:#bfead0;border:1px solid rgba(46,204,113,.25);background:rgba(46,204,113,.10);padding:6px 10px;border-radius:999px}
+    .products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width: 900px){.products{grid-template-columns:1fr}}
+    .productTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .badge{font-size:12px;font-weight:900;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:#d9e6ff}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 900px){.steps{grid-template-columns:1fr}}
+    .step{display:flex;gap:12px}
+    .num{
+      width:34px;height:34px;border-radius:10px;
+      background: rgba(46,204,113,.18);
+      border:1px solid rgba(46,204,113,.30);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:1000;color:#c9ffe0;
+      flex:0 0 auto;
+    }
+    form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width: 900px){form{grid-template-columns:1fr}}
+    input, select, textarea{
+      width:100%;padding:12px 12px;border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;grid-column: 1 / -1;resize:vertical}
+    .full{grid-column: 1 / -1}
+    .small{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
+    .cta{
+      background: linear-gradient(90deg, rgba(46,204,113,.18), rgba(34,197,94,.08));
+      border:1px solid rgba(46,204,113,.25);
+      border-radius: var(--radius);
+      padding:18px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      flex-wrap:wrap;
+    }
+    footer{padding:20px 0 36px;color:var(--muted);border-top:1px solid var(--border);margin-top:24px}
+    .k{color:var(--text);font-weight:900}
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="wrap">
+      <div class="brand">
+        <!-- ✅ Put your uploaded logo file in same folder and name it: logo.png -->
+        <img src="logo.png" alt="Poushtikam Mushroom Logo" />
+        <div>
+          Shashiprabha Agritech
+          <small>Poushtikam Mushroom • 100% Organic • Button & Oyster</small>
+        </div>
+      </div>
+
+      <div class="navlinks">
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="#order">How to Order</a>
+        <a href="#training">Training</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="btn primary">Get Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="hero" id="home">
+      <div class="grid2">
+        <div>
+          <div class="tag">🍄 100% Organic • Fresh & Locally Grown • Supaul, Bihar</div>
+          <h1>Poushtikam Mushroom<br/>Fresh Button & Oyster</h1>
+          <p class="lead">
+            Naturally grown mushrooms with hygienic handling — for households, retailers, and bulk buyers.
+            We also offer <b>paid mushroom farming training</b> for beginners who want to start locally.
+          </p>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" href="#contact">Request Price / Bulk Supply</a>
+            <a class="btn" href="#training">Join Training</a>
+            <a class="btn" id="whatsappBtn" href="#" rel="noopener">WhatsApp: 9823741455</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>100% Organic</b><span>No chemicals • Naturally grown</span></div>
+            <div class="stat"><b>2 Varieties</b><span>Button & Oyster mushrooms</span></div>
+            <div class="stat"><b>Paid Training</b><span>Practical farming guidance</span></div>
+          </div>
+
+          <div class="small" style="margin-top:12px">
+            <b>Location:</b> Ward No-3, Barail, Dist- Supaul, Bihar, Supaul, India, 85001
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <h3 style="margin:0 0 8px">Quick Enquiry</h3>
+          <p style="margin:0 0 12px;color:var(--muted);line-height:1.5">
+            Retail / bulk order or training — share details and we’ll respond on WhatsApp.
+          </p>
+
+          <form id="leadForm">
+            <input required name="name" placeholder="Your Name" />
+            <input required name="phone" placeholder="Phone / WhatsApp" />
+            <select name="need" class="full">
+              <option value="Fresh Mushroom Order (Button/Oyster)">Fresh Mushroom Order (Button/Oyster)</option>
+              <option value="Bulk Supply / Retailers / Restaurants">Bulk Supply / Retailers / Restaurants</option>
+              <option value="Paid Mushroom Farming Training">Paid Mushroom Farming Training</option>
+            </select>
+            <textarea name="message" placeholder="Message (Quantity, location, preferred date / training interest, etc.)"></textarea>
+            <button class="btn primary full" type="submit">Submit Enquiry</button>
+          </form>
+
+          <div class="small">
+            Tip: Mention required quantity (in kg) and delivery location for faster confirmation.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="secHead">
+        <h2>Mushrooms: Benefits</h2>
+        <p>Nutritious, light, and a great everyday food option.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>High Nutrition</h3>
+          <p>Good source of protein, fiber, vitamins and minerals.</p>
+          <div class="pillrow"><span class="pill">Protein</span><span class="pill">Fiber</span><span class="pill">Vitamins</span></div>
+        </div>
+        <div class="card">
+          <h3>Healthy Choice</h3>
+          <p>Low fat and versatile — easy to add in daily meals.</p>
+          <div class="pillrow"><span class="pill">Low Fat</span><span class="pill">Light Meal</span><span class="pill">Everyday Use</span></div>
+        </div>
+        <div class="card">
+          <h3>Rural Opportunity</h3>
+          <p>Supports local income generation — less land, low water, fast cycle.</p>
+          <div class="pillrow"><span class="pill">Low Space</span><span class="pill">Low Water</span><span class="pill">Fast Cycle</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="secHead">
+        <h2>Products</h2>
+        <p>Fresh supply for homes, retailers and bulk buyers.</p>
+      </div>
+
+      <div class="products">
+        <div class="card">
+          <div class="productTop">
+            <h3 style="margin:0">Button Mushroom</h3>
+            <span class="badge">Fresh Supply</span>
+          </div>
+          <p>Clean, fresh and naturally grown. Ideal for sabzi, curry, pasta and snacks.</p>
+          <div class="pillrow"><span class="pill">Hygienic</span><span class="pill">Fresh Pack</span><span class="pill">Local</span></div>
+        </div>
+
+        <div class="card">
+          <div class="productTop">
+            <h3 style="margin:0">Oyster Mushroom</h3>
+            <span class="badge">Fresh Supply</span>
+          </div>
+          <p>Soft texture, great taste — perfect for stir-fry, soups and healthy recipes.</p>
+          <div class="pillrow"><span class="pill">Healthy</span><span class="pill">Versatile</span><span class="pill">Fresh</span></div>
+        </div>
+
+        <div class="card">
+          <div class="productTop">
+            <h3 style="margin:0">Bulk Orders</h3>
+            <span class="badge">Retail / HoReCa</span>
+          </div>
+          <p>For shops, restaurants and resellers — contact for best pricing and supply schedule.</p>
+          <div class="pillrow"><span class="pill">Bulk Rate</span><span class="pill">Consistent Supply</span><span class="pill">Support</span></div>
+        </div>
+
+        <div class="card">
+          <div class="productTop">
+            <h3 style="margin:0">Packaging & Hygiene</h3>
+            <span class="badge">Quality First</span>
+          </div>
+          <p>Handled with care to maintain freshness and quality.</p>
+          <div class="pillrow"><span class="pill">Clean Handling</span><span class="pill">Freshness</span><span class="pill">Trust</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="secHead">
+        <h2>How to Order</h2>
+        <p>Simple process — we confirm availability quickly.</p>
+      </div>
+
+      <div class="steps">
+        <div class="card step">
+          <div class="num">1</div>
+          <div>
+            <h3 style="margin:0 0 6px">Send Requirement</h3>
+            <p>WhatsApp quantity (kg), variety (Button/Oyster), and location.</p>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="num">2</div>
+          <div>
+            <h3 style="margin:0 0 6px">Confirm Price</h3>
+            <p>We confirm rate, packing and delivery/collection option.</p>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="num">3</div>
+          <div>
+            <h3 style="margin:0 0 6px">Fresh Supply</h3>
+            <p>Fresh packing and timely dispatch based on schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="training">
+      <div class="secHead">
+        <h2>Paid Mushroom Farming Training</h2>
+        <p>Practical, beginner-friendly training for those who want to start mushroom farming.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>What You’ll Learn</h3>
+          <p>Setup, hygiene, temperature management, watering schedule, harvesting and storage basics.</p>
+        </div>
+        <div class="card">
+          <h3>Who It’s For</h3>
+          <p>Beginners, youth, women entrepreneurs, and anyone exploring rural self-employment.</p>
+        </div>
+        <div class="card">
+          <h3>Training Enquiry</h3>
+          <p>Send “TRAINING” on WhatsApp and we’ll share batches, fees and schedule.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="secHead">
+        <h2>Contact</h2>
+        <p>Orders, bulk supply, or training — connect on WhatsApp.</p>
+      </div>
+
+      <div class="cta">
+        <div>
+          <h3>WhatsApp for Fast Response</h3>
+          <p><b>+91 98237 41455</b> • Ward No-3, Barail, Dist- Supaul, Bihar, 85001</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" id="whatsappBtn2" href="#" rel="noopener">Message on WhatsApp</a>
+          <a class="btn" href="#home">Fill Quick Enquiry</a>
+        </div>
+      </div>
+
+      <div class="small" style="margin-top:12px">
+        Working Hours: 9 AM – 7 PM (update if needed)
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class="k">Shashiprabha Agritech</div>
+        <div style="margin-top:6px">Poushtikam Mushroom • 100% Organic • Button & Oyster</div>
+        <div class="small">© <span id="year"></span> Shashiprabha Agritech. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = "919823741455"; // ✅ Updated
+    const DEFAULT_MESSAGE = encodeURIComponent(
+      "Hello! I’m interested in Poushtikam Mushroom (Shashiprabha Agritech). Please share price/availability. Also share training details if available."
+    );
+
+    function waLink(){
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${DEFAULT_MESSAGE}`;
+    }
+
+    document.getElementById("whatsappBtn").href = waLink();
+    document.getElementById("whatsappBtn2").href = waLink();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("leadForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const name = data.get("name") || "";
+      const phone = data.get("phone") || "";
+      const need = data.get("need") || "";
+      const msg = data.get("message") || "";
+      const text = encodeURIComponent(
+        `Hello! New enquiry for Shashiprabha Agritech (Poushtikam Mushroom).\n\nName: ${name}\nPhone: ${phone}\nNeed: ${need}\nMessage: ${msg}\n\nLocation: Ward No-3, Barail, Dist- Supaul, Bihar, 85001`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+    });
+  </script>
+</body>
+</html>
